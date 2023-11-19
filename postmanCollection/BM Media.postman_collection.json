@@ -1,0 +1,776 @@
+{
+	"info": {
+		"_postman_id": "53a34c50-9089-4790-9616-eb8b25f4342e",
+		"name": "BM Media",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24956420"
+	},
+	"item": [
+		{
+			"name": "post",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/posts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getSingleDetail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/posts/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"posts",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "6550828348d112f37c749521"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "postByCat",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/posts/byCat/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"posts",
+								"byCat",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "6558d45957196f4d44410b98"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "postByUser",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/posts/byUser/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"posts",
+								"byUser",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "6559c100aef03a9afbd6a655"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddData",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTU5YzEwMGFlZjAzYTlhZmJkNmE2NTUiLCJuYW1lIjoiQXVuZyBBdW5nIiwiZW1haWwiOiJhdW5nYXVuZ0BnbWFpbC5jb20iLCJwaG9uZSI6IjA5MTIzNDU2Nzg4IiwiY3JlYXRlZCI6IjIwMjMtMTEtMTlUMDg6MDE6MjIuMDY0WiIsImlhdCI6MTcwMDM4MDkzNSwiZXhwIjoxNzAwMzg0NTM1fQ.wwW1DNzbWFQZ1NLh8XIVDyiD-NxmKOVdDFBKM0pMiPc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/home/coe-dev/Pictures/Screenshots/Screenshot from 2023-11-10 15-53-06.png"
+								},
+								{
+									"key": "cat",
+									"value": "6558d45957196f4d44410b98",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "Testing Again 4",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Description testing Again",
+									"type": "text"
+								},
+								{
+									"key": "user",
+									"value": "6558d45957196f4d44410b92",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/posts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Single Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTU3OTYzYThlYjc1ODJiYTMxMDU2YjYiLCJuYW1lIjoiQXVuZyBNYXVuZyIsImVtYWlsIjoiYXVuZ0BnbWFpbC5jb20iLCJwaG9uZSI6IjA5MTIzNDU2Nzg5IiwiY3JlYXRlZCI6IjIwMjMtMTEtMTdUMTY6MzQ6NTIuMTA1WiIsImlhdCI6MTcwMDM3MzgwMCwiZXhwIjoxNzAwMzc3NDAwfQ.b_tnNunBg9HoWS9TcfjMEVS0Jp5YQ6sIW9yGDxwfKDM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\" : \"Change title\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/posts/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"posts",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "6559b93cf1a919e0603bd5ae"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/posts/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"posts",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "6550828348d112f37c749521"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "paginate",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/posts/paginate/:page",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"posts",
+								"paginate",
+								":page"
+							],
+							"variable": [
+								{
+									"key": "page",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"phone\" : \"09123456788\",\n    \"password\": \"12345abcd\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/users/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"Aung Aung\",\n    \"password\": \"12345abcd\",\n    \"email\" : \"aungaung@gmail.com\",\n    \"phone\": \"09123456788\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/users/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "cat",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTU3OTYzYThlYjc1ODJiYTMxMDU2YjYiLCJuYW1lIjoiQXVuZyBNYXVuZyIsImVtYWlsIjoiYXVuZ0BnbWFpbC5jb20iLCJwaG9uZSI6IjA5MTIzNDU2Nzg5IiwiY3JlYXRlZCI6IjIwMjMtMTEtMTdUMTY6MzQ6NTIuMTA1WiIsImlhdCI6MTcwMDMxNjAyNSwiZXhwIjoxNzAwMzE5NjI1fQ.ot9PIuNGoJHjaS0xogcY5VliBDD3W9rjCp2fUU5SjHA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/cats",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cats"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/cats/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cats",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "65538f8d29e49081c05123fb"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detail Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/cats/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cats",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/home/coe-dev/Pictures/Screenshots/Screenshot from 2023-11-10 15-54-19.png"
+								},
+								{
+									"key": "name",
+									"value": "Yangon",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/cats",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cats"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": [],
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/cats/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cats",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "6550db023423552b09ce9411"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Image Upload",
+			"item": [
+				{
+					"name": "single file upload",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Accept",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/home/coe-dev/Pictures/Screenshots/Screenshot from 2023-11-10 15-54-19.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/gallery",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"gallery"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete file",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"filename\" : \"1699792764929_Screenshot from 2023-11-11 15-32-22.png\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/gallery/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"gallery",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "multi file upload",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "files",
+									"type": "file",
+									"src": "/home/coe-dev/Pictures/Screenshots/Screenshot from 2023-11-11 15-32-22.png"
+								},
+								{
+									"key": "files",
+									"type": "file",
+									"src": "/home/coe-dev/Pictures/Screenshots/Screenshot from 2023-11-11 16-08-36.png"
+								},
+								{
+									"key": "files",
+									"type": "file",
+									"src": "/home/coe-dev/Pictures/Screenshots/Screenshot from 2023-11-11 10-07-15.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/gallery/multi",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"gallery",
+								"multi"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "tag",
+			"item": [
+				{
+					"name": "add",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTU5YzEwMGFlZjAzYTlhZmJkNmE2NTUiLCJuYW1lIjoiQXVuZyBBdW5nIiwiZW1haWwiOiJhdW5nYXVuZ0BnbWFpbC5jb20iLCJwaG9uZSI6IjA5MTIzNDU2Nzg4IiwiY3JlYXRlZCI6IjIwMjMtMTEtMTlUMDg6MDE6MjIuMDY0WiIsImlhdCI6MTcwMDM4MDkzNSwiZXhwIjoxNzAwMzg0NTM1fQ.wwW1DNzbWFQZ1NLh8XIVDyiD-NxmKOVdDFBKM0pMiPc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Hee Hee Harr Harr",
+									"type": "text"
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/home/coe-dev/Pictures/Screenshots/Screenshot from 2023-11-10 15-54-19.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/tags",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tags"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:3000/tags",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tags"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "patch",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTU5YzEwMGFlZjAzYTlhZmJkNmE2NTUiLCJuYW1lIjoiQXVuZyBBdW5nIiwiZW1haWwiOiJhdW5nYXVuZ0BnbWFpbC5jb20iLCJwaG9uZSI6IjA5MTIzNDU2Nzg4IiwiY3JlYXRlZCI6IjIwMjMtMTEtMTlUMDg6MDE6MjIuMDY0WiIsImlhdCI6MTcwMDM4MDkzNSwiZXhwIjoxNzAwMzg0NTM1fQ.wwW1DNzbWFQZ1NLh8XIVDyiD-NxmKOVdDFBKM0pMiPc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "name",
+								"value": "We Change it",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Change ple",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/tags/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tags",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "6559ff956dd2e1649c898f03"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
